@@ -2,7 +2,7 @@
 
 El portal de chisme y cultura futbolera para chicas de 18 a 25 años en Latinoamérica: el fútbol, con labial.
 
-**Sitio en vivo:** https://muak.vercel.app <!-- reemplazar por la URL real que entregue Vercel -->
+**Sitio en vivo:** https://muakproyecto.vercel.app/
 
 ## Sobre la marca
 
