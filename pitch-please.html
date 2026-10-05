@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es" data-tema="nubes">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pitch Please — Muak</title>
+  <meta name="description" content="Pitch Please es el chisme del fútbol de Muak, con fuente y con semáforo: lo confirmado, lo que se rumorea y lo que solo es teoría.">
+  <meta name="theme-color" content="#FFE3EF">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../assets/logo/muak-favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_LA">
+  <meta property="og:site_name" content="Muak">
+  <meta property="og:title" content="Pitch Please — Muak">
+  <meta property="og:description" content="El chisme del fútbol, con fuente y con semáforo: lo confirmado, lo que se rumorea y lo que solo es teoría.">
+  <meta property="og:image" content="https://muak.vercel.app/assets/img/portada.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logo de Muak: un balón de fútbol con un beso de labial rosa, sobre fondo rosa.">
+  <meta name="twitter:card" content="summary_large_image">
+  <script>try{var t=new URLSearchParams(location.search).get("tema")||localStorage.getItem("muak-tema");if(t)document.documentElement.setAttribute("data-tema",t)}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,600..900,0..100,0..1;1,9..144,600..900,0..100,0..1&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../script.js" defer></script>
+  <!--PP-TEMP--><script>
+/* PP-TEST */
+document.addEventListener('DOMContentLoaded', function(){ setTimeout(function(){
+  var d = document, vw = d.documentElement.clientWidth, out = [];
+  function log(x){ out.push(x); }
+  try {
+  log('== vw=' + vw + ' scrollW=' + d.documentElement.scrollWidth + ' tema=' + d.documentElement.dataset.tema);
+  var wide = [];
+  d.querySelectorAll('main *, footer *').forEach(function(el){
+    var r = el.getBoundingClientRect();
+    if (r.width && (r.right > vw + 0.5 || r.left < -0.5)) wide.push((el.className || el.tagName) + ' L' + Math.round(r.left) + ' R' + Math.round(r.right));
+  });
+  log('fuera (main/footer): ' + (wide.slice(0, 15).join(' | ') || 'ninguno'));
+  var hdr = [];
+  d.querySelectorAll('.encabezado *').forEach(function(el){ var r = el.getBoundingClientRect(); if (r.width && r.right > vw + 0.5) hdr.push((el.className || el.tagName) + ' R' + Math.round(r.right)); });
+  log('header fuera: ' + (hdr.join(',') || 'ninguno'));
+  var texts = Array.prototype.slice.call(d.querySelectorAll('main p, main h2, main li, main .semaforo, main h1 img, main .pp-marcador'));
+  d.querySelectorAll('.pp-st').forEach(function(st){
+    var s = st.getBoundingClientRect(); if (!s.width) { log('sticker oculto: ' + st.className); return; }
+    var hits = [];
+    texts.forEach(function(t){
+      if (t.contains(st)) return;
+      var rects;
+      if (t.tagName === 'IMG' || t.classList.contains('pp-marcador')) rects = [t.getBoundingClientRect()];
+      else { var range = d.createRange(); range.selectNodeContents(t); rects = range.getClientRects(); }
+      Array.prototype.forEach.call(rects, function(r){
+        var ix = Math.min(r.right, s.right) - Math.max(r.left, s.left), iy = Math.min(r.bottom, s.bottom) - Math.max(r.top, s.top);
+        if (ix > 4 && iy > 4) hits.push((t.className || t.tagName) + '[' + Math.round(ix) + 'x' + Math.round(iy) + ']');
+      });
+    });
+    log('sticker ' + st.className.replace('pp-st ', '') + ' w' + Math.round(s.width) + ' -> ' + (hits.slice(0,4).join(', ') || 'no tapa texto'));
+  });
+  // gap between sticker pairs (labios / llave)
+  var a = d.querySelector('.pp-st--labios'), b = d.querySelector('.pp-st--llave');
+  if (a && b) { var ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect(); log('labios-llave dist x=' + Math.round(Math.max(rb.left - ra.right, ra.left - rb.right)) + ' y=' + Math.round(rb.top - ra.bottom)); }
+  } catch (e) { log('ERR ' + e); }
+  parent.postMessage({pp: out.join('\n')}, '*');
+}, 2500); });
+</script><!--/PP-TEMP-->
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <div class="fondo" aria-hidden="true">
+    <div class="nubes-lejos"></div>
+    <div class="nubes-cerca"></div>
+    <div class="cuero"></div>
+    <div class="cuaderno"></div>
+    <div class="gala"></div>
+    <div class="stickers"></div>
+    <div class="destellos"></div>
+  </div>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="logo" href="../index.html" aria-label="Muak, ir a la portada">
+        <img src="../assets/logo/muak-simbolo.svg" alt="" width="46" height="46">
+        <span aria-hidden="true">muak</span>
+      </a>
+
+      <button class="boton-menu" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span aria-hidden="true">☰</span> <span class="texto-boton">Menú</span>
+      </button>
+
+      <nav class="nav" id="menu-principal" aria-label="Principal">
+        <ul>
+          <li><a href="../index.html">Portada</a></li>
+          <li><a href="pitch-please.html" aria-current="page">Pitch Please</a></li>
+          <li><a href="clase-de-cancha.html">Clase de Cancha</a></li>
+          <li><a href="diccionario-rosa.html">Diccionario Rosa</a></li>
+          <li><a href="detras-del-beso.html">Detrás del Beso</a></li>
+          <li><a href="contacto.html">Mándanos un Muak</a></li>
+        </ul>
+      </nav>
+
+      <div class="selector-tema">
+        <button class="boton-tema" type="button" aria-expanded="false" aria-controls="panel-tema">
+          <span aria-hidden="true">✦</span> <span class="texto-boton">Tema</span>
+        </button>
+        <div class="panel-tema" id="panel-tema" role="group" aria-label="Elige el fondo" hidden>
+          <p>Elige tu vibra</p>
+          <button class="opcion-tema" type="button" data-tema-opcion="nubes" aria-pressed="true">
+            <span class="muestra muestra-nubes" aria-hidden="true"></span>
+            <span>Nubes de algodón<small>Un cielo que no se queda quieto</small></span>
+          </button>
+          <button class="opcion-tema" type="button" data-tema-opcion="diario" aria-pressed="false">
+            <span class="muestra muestra-diario" aria-hidden="true"></span>
+            <span>Diario secreto<small>Cuero rosa y stickers pegados</small></span>
+          </button>
+          <button class="opcion-tema" type="button" data-tema-opcion="punk" aria-pressed="false">
+            <span class="muestra muestra-punk" aria-hidden="true"></span>
+            <span>Punk rosa<small>Cuaderno rayado con doodles</small></span>
+          </button>
+          <button class="opcion-tema" type="button" data-tema-opcion="gala" aria-pressed="false">
+            <span class="muestra muestra-gala" aria-hidden="true"></span>
+            <span>Noche de gala<small>Modo oscuro con destellos</small></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="cinta-spotted" role="region" aria-label="Lo último en Pitch Please">
+    <div class="pista">
+      <span><b>SPOTTED:</b> el 9 de Bahía Dorada en el aeropuerto, con su representante</span>
+      <span><b>CONFIRMADO:</b> Real Candelaria tiene nueva capitana</span>
+      <span><b>RUMOR:</b> alguien tocó los guantes que nadie debía tocar</span>
+      <span><b>TEORÍA:</b> la alineación filtrada salió del propio vestuario</span>
+      <span aria-hidden="true"><b>SPOTTED:</b> el 9 de Bahía Dorada en el aeropuerto, con su representante</span>
+      <span aria-hidden="true"><b>CONFIRMADO:</b> Real Candelaria tiene nueva capitana</span>
+      <span aria-hidden="true"><b>RUMOR:</b> alguien tocó los guantes que nadie debía tocar</span>
+      <span aria-hidden="true"><b>TEORÍA:</b> la alineación filtrada salió del propio vestuario</span>
+    </div>
+  </div>
+
+  <main id="contenido">
+    <header class="cabecera-pagina pp-cabecera">
+      <div class="contenedor">
+        <img class="pp-st pp-st--chat" src="../assets/img/stickers/chat-corazon.webp" alt="" aria-hidden="true" width="241" height="229">
+        <img class="pp-st pp-st--ojos" src="../assets/img/stickers/ojo-pestanas.webp" alt="" aria-hidden="true" width="263" height="162">
+        <h1><img class="titulo-recortado" src="../assets/img/titulos/pitch-please.webp" alt="Pitch Please" width="1319" height="220"></h1>
+        <p class="bajada">El chisme del fútbol, con fuente y con semáforo: lo confirmado, lo que se rumorea y lo que solo es teoría.</p>
+      </div>
+    </header>
+
+    <section class="pp-chismes" aria-label="Los chismes de la semana">
+      <div class="contenedor">
+        <div class="recorte recorte--sin-cinta pp-barra">
+          <p class="pp-saludo">Hola, titulares: pónganse cómodas, que el chisme ya salió a la cancha.</p>
+          <div class="pp-filtrar">
+            <p class="pp-filtrar-titulo" id="titulo-filtros">Filtra por semáforo</p>
+            <div class="filtros" role="group" aria-labelledby="titulo-filtros" data-filtros="#lista-chismes" data-aviso="#aviso-filtro">
+              <button class="filtro" type="button" data-filtro="todo" aria-pressed="true"><span class="pp-punto pp-punto--todo" aria-hidden="true"></span>Todo <span class="pp-cuenta" aria-hidden="true">4</span></button>
+              <button class="filtro" type="button" data-filtro="confirmado" aria-pressed="false"><span class="pp-punto pp-punto--confirmado" aria-hidden="true"></span>Confirmado <span class="pp-cuenta" aria-hidden="true">2</span></button>
+              <button class="filtro" type="button" data-filtro="rumor" aria-pressed="false"><span class="pp-punto pp-punto--rumor" aria-hidden="true"></span>Rumor <span class="pp-cuenta" aria-hidden="true">2</span></button>
+              <button class="filtro" type="button" data-filtro="teoria" aria-pressed="false"><span class="pp-punto pp-punto--teoria" aria-hidden="true"></span>Teoría <span class="pp-cuenta" aria-hidden="true">2</span></button>
+            </div>
+          </div>
+          <p id="aviso-filtro" class="sr-only" aria-live="polite"></p>
+        </div>
+
+        <div class="pp-lista" id="lista-chismes">
+
+          <!-- 1. Nota destacada -->
+          <article class="recorte recorte--marco nota pp-nota pp-nota--ancha pp-nota--destacada" id="dante-robledo" data-semaforo="rumor" aria-labelledby="titulo-dante">
+            <p class="pp-sello">El chisme de la semana</p>
+            <img class="pp-st pp-st--ojo" src="../assets/img/stickers/ojo.webp" alt="" aria-hidden="true" width="320" height="230">
+            <div class="pp-interior">
+              <div class="pp-cabeza">
+                <div class="etiquetas"><span class="semaforo semaforo--rumor">Rumor</span></div>
+                <p class="antetitulo">Primera Estelar · Mercado de pases</p>
+                <h2 id="titulo-dante"><span class="pp-gancho">¿Se nos va?</span> <span class="pp-resto">Unfollow, conferencia cancelada y un avión: el misterio de Dante Robledo</span></h2>
+                <p class="resumen">El goleador de Atlético Bahía Dorada anda muy callado a diez días del cierre del mercado de pases de la Primera Estelar. Y aquí el silencio también es noticia.</p>
+              </div>
+              <div class="pp-cuerpo">
+                <p class="pp-texto">Hola, titulares. El martes, Dante Robledo dejó de seguir la cuenta oficial de Atlético Bahía Dorada. El miércoles faltó a la conferencia de prensa por una “molestia muscular” que nadie vio en el entrenamiento. Y el jueves, dos hinchas juran que lo vieron en el aeropuerto con su representante. Lo confirmado es el unfollow. Lo que se rumorea es que Sporting Mirasol ya le guardó la camiseta nueve. El mercado cierra en diez días, y alguien en este club está contando las horas.</p>
+                <p class="pp-contexto"><span class="pp-contexto-etiqueta">Clase exprés</span> El mercado de pases no está en las Reglas de Juego de la IFAB: lo regulan la FIFA y cada federación. Fuera de la ventana de transferencias no se inscribe a nadie nuevo, salvo excepciones puntuales. Por eso aquí cada día cuenta. <a href="clase-de-cancha.html#mercado-de-pases">Te lo explicamos en Clase de Cancha</a>.</p>
+                <p class="firma">Un beso al ángulo. — Muak</p>
+              </div>
+              <div class="pp-cronologia" aria-hidden="true">
+                <p class="pp-cronologia-titulo">Tres señales, un silencio y un avión.</p>
+                <ol>
+                  <li><span class="pp-dia">Martes</span> Deja de seguir al club <span class="semaforo semaforo--confirmado">Confirmado</span></li>
+                  <li><span class="pp-dia">Miércoles</span> Falta a la conferencia por una “molestia muscular”</li>
+                  <li><span class="pp-dia">Jueves</span> ¿Visto en el aeropuerto con su representante? <span class="semaforo semaforo--rumor">Rumor</span></li>
+                  <li class="pp-regresiva"><span class="pp-dia">Cuenta regresiva</span> <b>10</b> días para que cierre el mercado</li>
+                </ol>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Renata Solís -->
+          <article class="recorte nota pp-nota pp-nota--izq" id="renata-solis" data-semaforo="confirmado teoria" aria-labelledby="titulo-renata">
+            <img class="pp-st pp-st--curita" src="../assets/img/stickers/corazon-curita.webp" alt="" aria-hidden="true" width="296" height="320">
+            <div class="pp-interior">
+              <div class="pp-cabeza">
+                <div class="etiquetas">
+                  <span class="semaforo semaforo--confirmado">Confirmado<span class="pp-sobre">: el cambio de capitana</span></span>
+                  <span class="semaforo semaforo--teoria">Teoría<span class="pp-sobre">: el gesto</span></span>
+                </div>
+                <p class="antetitulo">Liga Aurora · Vestuario</p>
+                <h2 id="titulo-renata"><span class="pp-gancho">Nuevo brazalete, viejas heridas:</span> <span class="pp-resto">Real Candelaria está en modo telenovela</span></h2>
+                <p class="resumen">Renata Solís dejó de ser capitana después de seis temporadas. Su respuesta llegó en el minuto 88 de la Liga Aurora, sin decir una palabra.</p>
+              </div>
+              <div class="pp-cuerpo">
+                <p class="pp-cita" aria-hidden="true"><span class="pp-cita-minuto">88'</span> Sin palabras. Sin posteo.</p>
+                <p class="pp-texto">Después de seis temporadas, Renata Solís ya no es la capitana de Real Candelaria: la DT le entregó el brazalete a Abril Montaño, de 21 años. Eso es oficial. Lo que todas vimos en la transmisión es que el domingo Renata anotó el gol del triunfo en el minuto 88, corrió directo a la banca y se tocó el brazo izquierdo. Sin palabras. Sin posteo. ¿Mensaje o casualidad? Eso no lo sabemos, así que no lo vamos a afirmar. Solo te dejamos la repetición.</p>
+                <p class="firma">Un beso al ángulo. — Muak</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Los guantes de Sierra Clara -->
+          <article class="recorte nota pp-nota pp-nota--der" id="guantes-sierra-clara" data-semaforo="rumor" aria-labelledby="titulo-guantes">
+            <img class="pp-st pp-st--candado" src="../assets/img/stickers/candado.webp" alt="" aria-hidden="true" width="268" height="320">
+            <div class="pp-interior">
+              <div class="pp-cabeza">
+                <div class="etiquetas"><span class="semaforo semaforo--rumor">Rumor</span></div>
+                <p class="antetitulo">Primera Estelar · Supersticiones</p>
+                <h2 id="titulo-guantes"><span class="pp-gancho">Los guantes que nadie debía tocar:</span> <span class="pp-resto">la superstición que le costó el invicto a Sierra Clara</span></h2>
+                <p class="resumen">Siete partidos con la valla invicta, un préstamo inocente y un gol en el minuto 3. Tú saca tus conclusiones.</p>
+                <div class="pp-cifras" aria-hidden="true">
+                  <p><b>7</b> partidos con la valla invicta</p>
+                  <p><b>3'</b> minuto del gol rival tras el préstamo</p>
+                </div>
+              </div>
+              <div class="pp-cuerpo">
+                <p class="pp-texto">Todo el mundo en Deportivo Sierra Clara conoce una regla: nadie toca los guantes de Tommy Echeverri. Llevaba siete partidos sin recibir goles y un ritual sagrado: los mismos guantes y la misma canción. El sábado, según alguien de adentro, el arquero suplente se los pidió prestados para calentar. Minuto 3: gol del rival. Tommy no culpó a nadie en público, pero en la foto del equipo quedó a dos metros de su compañero. Las supersticiones no ganan partidos, pero sí arman dramas.</p>
+                <p class="pp-contexto"><span class="pp-contexto-etiqueta">Diccionario Rosa</span> <strong>Valla invicta (o arco en cero):</strong> terminar el partido sin recibir goles. Límites sanos, pero en la cancha. <a href="diccionario-rosa.html#valla-invicta">Ver en el Diccionario Rosa</a>.</p>
+                <p class="firma">Un beso al ángulo. — Muak</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. La alineación filtrada -->
+          <article class="recorte recorte--marco nota pp-nota pp-nota--ancha pp-nota--filtrada" id="alineacion-filtrada" data-semaforo="confirmado teoria" aria-labelledby="titulo-alineacion">
+            <img class="pp-st pp-st--labios" src="../assets/img/stickers/labios.webp" alt="" aria-hidden="true" width="320" height="164">
+            <div class="pp-interior">
+              <div class="pp-cabeza">
+                <div class="etiquetas">
+                  <span class="semaforo semaforo--confirmado">Confirmado<span class="pp-sobre">: la filtración</span></span>
+                  <span class="semaforo semaforo--teoria">Teoría<span class="pp-sobre">: el resto</span></span>
+                </div>
+                <p class="antetitulo">Primera Estelar · Clásico del Puerto</p>
+                <h2 id="titulo-alineacion"><span class="pp-gancho">Alguien de adentro habló:</span> <span class="pp-resto">la alineación filtrada que tiene a Puerto Esmeralda buscando culpables</span></h2>
+                <p class="resumen">Dos horas antes del Clásico del Puerto, el once titular ya circulaba en redes. El DT habla de traición. Nosotras tenemos preguntas.</p>
+                <div class="pp-marcador" aria-hidden="true">
+                  <p class="pp-marcador-titulo">Clásico del Puerto · Final</p>
+                  <p class="pp-marcador-fila">
+                    <span class="pp-equipo">Puerto Esmeralda</span>
+                    <span class="pp-goles">0<i>–</i>2</span>
+                    <span class="pp-equipo">Unión Marejada</span>
+                  </p>
+                  <p class="pp-marcador-nota">El once salió en redes 2 horas antes. La cuenta anónima desapareció esa noche.</p>
+                </div>
+              </div>
+              <div class="pp-cuerpo">
+                <p class="pp-texto">Dos horas antes del clásico contra Unión Marejada, una cuenta anónima publicó el once titular de Puerto Esmeralda. Era idéntico al real, con el cambio de último momento incluido. El profe Hernán Quintero lo confirmó en conferencia: “Alguien de adentro habló, y lo vamos a encontrar”. Puerto Esmeralda perdió 2-0 y la cuenta anónima desapareció esa noche. Lo confirmado: la filtración y la derrota. Lo que no sabemos: quién fue. Y no vamos a señalar a nadie sin pruebas, aunque el chat de las titulares ya tenga teorías.</p>
+                <p class="pp-contexto"><span class="pp-contexto-etiqueta">Diccionario Rosa</span> <strong>Clásico:</strong> el partido entre rivales de toda la vida. Es como un reencuentro de exalumnas: todas llegan arregladas y con cuentas pendientes. <a href="diccionario-rosa.html#clasico">Ver en el Diccionario Rosa</a>.</p>
+                <p class="firma">Un beso al ángulo. — Muak</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-reglas">
+      <div class="contenedor">
+        <div class="recorte recorte--marco pp-reglas">
+          <img class="pp-st pp-st--llave" src="../assets/img/stickers/llave.webp" alt="" aria-hidden="true" width="178" height="320">
+          <div class="pp-reglas-cabeza">
+            <p class="antetitulo">Antes de reenviar, VAR-ifícalo</p>
+            <h2 id="titulo-reglas">Las reglas de la casa</h2>
+            <p>Aquí el chisme llega con fuente y con semáforo. Cada nota lleva su etiqueta para que sepas qué puedes repetir en el grupo y qué es pura conversación de tribuna. Si una nota trae dos etiquetas, te decimos qué parte es cuál.</p>
+          </div>
+          <ul class="pp-leyenda">
+            <li>
+              <span class="semaforo semaforo--confirmado">Confirmado</span>
+              <p>Hay fuente oficial o es un hecho público. Lo puedes repetir en el grupo sin miedo.</p>
+            </li>
+            <li>
+              <span class="semaforo semaforo--rumor">Rumor</span>
+              <p>Hay una fuente identificable, pero no oficial, y siempre te decimos cuál es.</p>
+            </li>
+            <li>
+              <span class="semaforo semaforo--teoria">Teoría</span>
+              <p>Es opinión de Muak y así te lo decimos. Aquí nadie presenta una teoría como un hecho.</p>
+            </li>
+          </ul>
+          <div class="pp-reglas-pie">
+            <p class="pp-ficcion"><strong>Todo este universo es ficticio.</strong> La Primera Estelar, la Liga Aurora, sus clubes, jugadoras, jugadores y DT solo existen en este prototipo. Con personas reales, solo publicaríamos lo confirmado o un rumor atribuido a un medio verificable. Nunca inventamos nada sobre nadie.</p>
+            <p>¿Viste algo que no cuadra? <a href="contacto.html">Mándanos un Muak</a>: te leemos todas, y verificamos antes de publicar.</p>
+            <p class="firma">Un beso al ángulo. — Muak</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div>
+        <a class="logo-pie" href="../index.html" aria-label="Muak, ir a la portada">
+          <img src="../assets/logo/muak-horizontal-oscuro.png" alt="" width="1074" height="294">
+        </a>
+        <p class="firma">Un beso al ángulo. — Muak</p>
+        <p>El fútbol, con labial. Chisme de cancha con fuente para chicas que aman el drama y entienden el juego.</p>
+      </div>
+      <nav aria-label="Secciones">
+        <h2>Secciones</h2>
+        <ul>
+          <li><a href="pitch-please.html">Pitch Please</a></li>
+          <li><a href="clase-de-cancha.html">Clase de Cancha</a></li>
+          <li><a href="diccionario-rosa.html">Diccionario Rosa</a></li>
+          <li><a href="detras-del-beso.html">Detrás del Beso</a></li>
+          <li><a href="contacto.html">Mándanos un Muak</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Síguenos</h2>
+        <p>#BesoAlÁngulo<br>TikTok e Instagram: @muak (muy pronto)</p>
+      </div>
+      <p class="creditos">
+        Prototipo académico © <span data-anio>2026</span> Muak. Todas las jugadoras, jugadores, clubes y ligas que aparecen en el contenido son ficticios.<br>
+        Ilustraciones: nubes de acuarela, stickers punk e historias rosadas de <a href="https://www.freepik.com">Freepik</a>. Beso pinup: <a href="https://www.freepik.com">Designed by rawpixel.com / Freepik</a>. Títulos recortados creados con la fuente Ramove Aniquis (Freepik), usada como imagen. Tipografías: Fraunces y Montserrat (Google Fonts).
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
