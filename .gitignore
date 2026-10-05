@@ -1,0 +1,28 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+
+# Archivos fuente pesados o con licencia que no se publican
+*.ai
+*.eps
+*.psd
+*.otf
+*.ttf
+fuentes/
+originales/
+
+# Videos (van a YouTube o Drive, nunca al repositorio)
+*.mp4
+*.mov
+
+# Variables de entorno y llaves
+.env
+.env.*
+
+# Vercel
+.vercel
