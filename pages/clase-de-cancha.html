@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es" data-tema="nubes">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clase de Cancha — Muak</title>
+  <meta name="description" content="Clase de Cancha: las reglas del fútbol con analogías brillantes, datos exactos y cero condescendencia. Offside, VAR, mercado de pases y tarjetas, cada una con su mini quiz.">
+  <meta name="theme-color" content="#FFE3EF">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../assets/logo/muak-favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_LA">
+  <meta property="og:site_name" content="Muak">
+  <meta property="og:title" content="Clase de Cancha — Muak">
+  <meta property="og:description" content="Las reglas del fútbol con analogías brillantes, datos exactos y cero condescendencia.">
+  <meta property="og:image" content="https://muak.vercel.app/assets/img/portada.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logo de Muak: un balón de fútbol con un beso de labial rosa, sobre fondo rosa.">
+  <meta name="twitter:card" content="summary_large_image">
+  <script>try{var t=new URLSearchParams(location.search).get("tema")||localStorage.getItem("muak-tema");if(t)document.documentElement.setAttribute("data-tema",t)}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,600..900,0..100,0..1;1,9..144,600..900,0..100,0..1&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../script.js" defer></script>
+  <script data-qa-temp>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('[role=tab][id$="-tab-regla"]').forEach(function (t) { t.click(); });
+  var q = document.querySelectorAll("[data-quiz]");
+  q[0].querySelector("button[data-correcta]").click();
+  q[1].querySelector("button[data-opcion]:not([data-correcta])").click();
+  q[2].querySelector("button[data-correcta]").click();
+  q[3].querySelector("button[data-opcion]:not([data-correcta])").click();
+});
+</script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <div class="fondo" aria-hidden="true">
+    <div class="nubes-lejos"></div>
+    <div class="nubes-cerca"></div>
+    <div class="cuero"></div>
+    <div class="cuaderno"></div>
+    <div class="gala"></div>
+    <div class="stickers"></div>
+    <div class="destellos"></div>
+  </div>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="logo" href="../index.html" aria-label="Muak, ir a la portada">
+        <img src="../assets/logo/muak-simbolo.svg" alt="" width="46" height="46">
+        <span aria-hidden="true">muak</span>
+      </a>
+
+      <button class="boton-menu" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span aria-hidden="true">☰</span> <span class="texto-boton">Menú</span>
+      </button>
+
+      <nav class="nav" id="menu-principal" aria-label="Principal">
+        <ul>
+          <li><a href="../index.html">Portada</a></li>
+          <li><a href="pitch-please.html">Pitch Please</a></li>
+          <li><a href="clase-de-cancha.html" aria-current="page">Clase de Cancha</a></li>
+          <li><a href="diccionario-rosa.html">Diccionario Rosa</a></li>
+          <li><a href="detras-del-beso.html">Detrás del Beso</a></li>
+          <li><a href="contacto.html">Mándanos un Muak</a></li>
+        </ul>
+      </nav>
+
+      <div class="selector-tema">
+        <button class="boton-tema" type="button" aria-expanded="false" aria-controls="panel-tema">
+          <span aria-hidden="true">✦</span> <span class="texto-boton">Tema</span>
+        </button>
+        <div class="panel-tema" id="panel-tema" role="group" aria-label="Elige el fondo" hidden>
+          <p>Elige tu vibra</p>
+          <button class="opcion-tema" type="button" data-tema-opcion="nubes" aria-pressed="true">
+            <span class="muestra muestra-nubes" aria-hidden="true"></span>
+            <span>Nubes de algodón<small>Un cielo que no se queda quieto</small></span>
+          </button>
+          <button class="opcion-tema" type="button" data-tema-opcion="diario" aria-pressed="false">
+            <span class="muestra muestra-diario" aria-hidden="true"></span>
+            <span>Diario secreto<small>Cuero rosa y stickers pegados</small></span>
+          </button>
+          <button class="opcion-tema" type="button" data-tema-opcion="punk" aria-pressed="false">
+            <span class="muestra muestra-punk" aria-hidden="true"></span>
+            <span>Punk rosa<small>Cuaderno rayado con doodles</small></span>
+          </button>
+          <button class="opcion-tema" type="button" data-tema-opcion="gala" aria-pressed="false">
+            <span class="muestra muestra-gala" aria-hidden="true"></span>
+            <span>Noche de gala<small>Modo oscuro con destellos</small></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <header class="cabecera-pagina cc-cabecera">
+      <div class="contenedor">
+        <h1 class="cc-h1"><img class="titulo-recortado" src="../assets/img/titulos/clase-de-cancha.webp" alt="Clase de Cancha" width="1710" height="220"></h1>
+        <p class="bajada">Las reglas del fútbol con analogías brillantes, datos exactos y cero condescendencia.</p>
+        <img class="cc-deco cc-deco--1" src="../assets/img/stickers/rayo.webp" alt="" aria-hidden="true" width="125" height="320">
+        <img class="cc-deco cc-deco--2" src="../assets/img/stickers/gafas-corazon.webp" alt="" aria-hidden="true" width="320" height="253">
+      </div>
+    </header>
+
+    <section class="seccion cc-seccion-indice" aria-labelledby="titulo-temario">
+      <div class="contenedor">
+        <div class="recorte recorte--marco cc-indice giro-der">
+          <div>
+            <p class="antetitulo">Hoy en clase</p>
+            <h2 id="titulo-temario">El temario</h2>
+            <p>Hola, titulares. Aquí cada regla viene en dos versiones: primero la analogía, después la regla exacta. Y al final, un mini quiz para que la próxima jugada polémica la cantes tú antes que el comentarista.</p>
+          </div>
+          <nav aria-label="Lecciones de Clase de Cancha">
+            <ol class="cc-chips">
+              <li><a class="cc-chip" href="#offside"><span class="cc-num" aria-hidden="true">01</span>Offside</a></li>
+              <li><a class="cc-chip" href="#var"><span class="cc-num" aria-hidden="true">02</span>El VAR</a></li>
+              <li><a class="cc-chip" href="#mercado-de-pases"><span class="cc-num" aria-hidden="true">03</span>Mercado de pases</a></li>
+              <li><a class="cc-chip" href="#tarjetas"><span class="cc-num" aria-hidden="true">04</span>Amarilla y roja</a></li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" aria-label="Lecciones">
+      <div class="contenedor cc-lecciones">
+
+        <!-- Lección 1: Offside -->
+        <article class="recorte recorte--marco cc-leccion giro-izq" id="offside" aria-labelledby="offside-titulo">
+          <div class="cc-lado">
+            <p class="cc-numero" aria-hidden="true">01</p>
+            <p class="antetitulo">Lección 01 · Regla 11 de la IFAB</p>
+            <h2 id="offside-titulo">Offside: estar en la foto no es delito (meterse en el drama, sí)</h2>
+            <p class="cc-remate">No es difícil, es timing. Y de timing sabes muchísimo.</p>
+            <img class="cc-sticker" src="../assets/img/stickers/ojo-pestanas.webp" alt="" aria-hidden="true" width="263" height="162">
+          </div>
+          <div class="cc-cuerpo">
+            <div class="pestanas">
+              <div role="tablist" aria-label="El offside en dos versiones">
+                <button type="button" role="tab" id="offside-tab-analogia" aria-controls="offside-analogia" aria-selected="true">La analogía</button>
+                <button type="button" role="tab" id="offside-tab-regla" aria-controls="offside-regla" aria-selected="false" tabindex="-1">La regla, en serio</button>
+              </div>
+              <div class="cc-panel cc-panel--analogia" role="tabpanel" id="offside-analogia" aria-labelledby="offside-tab-analogia" tabindex="0">
+                <p>Es como una historia de Instagram. Lo que cuenta es dónde salías en el instante exacto en que tu amiga tomó la foto, no a dónde corriste dos segundos después. Y salir en la foto no es un problema; el problema es meterte en el drama.</p>
+              </div>
+              <div class="cc-panel" role="tabpanel" id="offside-regla" aria-labelledby="offside-tab-regla" tabindex="0" hidden>
+                <p>Estás en posición de fuera de juego si, en el momento en que una compañera juega o toca el balón, alguna parte de tu cabeza, cuerpo o pies está en la mitad rival (sin contar la línea central) y más cerca de la línea de meta contraria que el balón y que la penúltima rival (normalmente, la última defensora antes de la arquera). Brazos y manos no cuentan.</p>
+                <p>Estar ahí no es infracción: solo se sanciona si participas en la jugada, interfieres con una rival o sacas ventaja. Si estás a la misma altura, estás habilitada.</p>
+                <p>No hay offside si recibes directo de un saque de banda, de meta o de esquina. <strong>Sanción: tiro libre indirecto.</strong></p>
+                <p class="cc-fuente">Fuente: Reglas de Juego IFAB 2026/27, Regla 11 (El fuera de juego).</p>
+              </div>
+            </div>
+
+            <div class="quiz" data-quiz
+                 data-bien="¡Al ángulo! Saliste en la foto, pero no te metiste en el drama: estar en posición adelantada no es infracción si no participas."
+                 data-mal="Uy, offside sentimental. Estar ahí no se sanciona: solo cuenta si participas en la jugada, interfieres con una rival o sacas ventaja. Dale otra mirada a “La regla, en serio”.">
+              <fieldset>
+                <legend><span class="cc-quiz-tag">Mini quiz</span> En el instante del pase estás en posición adelantada, pero no tocas el balón, no molestas a ninguna rival y no sacas ventaja. ¿Qué cobra la árbitra?</legend>
+                <div class="opciones">
+                  <button type="button" data-opcion aria-pressed="false">Offside: estar ahí ya es infracción</button>
+                  <button type="button" data-opcion data-correcta aria-pressed="false">Nada: la jugada sigue</button>
+                  <button type="button" data-opcion aria-pressed="false">Tiro libre directo para el otro equipo</button>
+                </div>
+              </fieldset>
+              <p class="resultado" aria-live="polite"></p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Lección 2: VAR -->
+        <article class="recorte recorte--marco cc-leccion giro-der" id="var" aria-labelledby="var-titulo">
+          <div class="cc-lado">
+            <p class="cc-numero" aria-hidden="true">02</p>
+            <p class="antetitulo">Lección 02 · Protocolo VAR de la IFAB</p>
+            <h2 id="var-titulo">El VAR: la amiga que pide ver el chat completo</h2>
+            <p class="cc-remate">Cuatro minutos de pantalla, cien mensajes en el grupo y una sola pregunta: ¿quién decide? Respuesta corta: la árbitra.</p>
+            <img class="cc-sticker" src="../assets/img/stickers/chat-corazon.webp" alt="" aria-hidden="true" width="241" height="229">
+          </div>
+          <div class="cc-cuerpo">
+            <div class="pestanas">
+              <div role="tablist" aria-label="El VAR en dos versiones">
+                <button type="button" role="tab" id="var-tab-analogia" aria-controls="var-analogia" aria-selected="true">La analogía</button>
+                <button type="button" role="tab" id="var-tab-regla" aria-controls="var-regla" aria-selected="false" tabindex="-1">La regla, en serio</button>
+              </div>
+              <div class="cc-panel cc-panel--analogia" role="tabpanel" id="var-analogia" aria-labelledby="var-tab-analogia" tabindex="0">
+                <p>El VAR es esa amiga que, antes de que mandes el audio furioso, te dice “espera, déjame ver el chat completo”. No decide por ti: te muestra lo que se te pasó, y la última palabra sigue siendo tuya.</p>
+              </div>
+              <div class="cc-panel" role="tabpanel" id="var-regla" aria-labelledby="var-tab-regla" tabindex="0" hidden>
+                <p>VAR significa <i lang="en">Video Assistant Referee</i> (árbitro asistente de video). Es un equipo arbitral que revisa las imágenes del partido. Solo interviene ante un error claro y evidente o un incidente grave que la árbitra no vio, y únicamente en situaciones que cambian el partido:</p>
+                <ul>
+                  <li>goles (incluida una falta u offside previo);</li>
+                  <li>penales;</li>
+                  <li>rojas directas;</li>
+                  <li>rojas por una segunda amarilla claramente equivocada;</li>
+                  <li>errores de identidad (tarjeta a la persona equivocada).</li>
+                </ul>
+                <p>Algunas competiciones también le permiten corregir un córner mal otorgado.</p>
+                <p><strong>La decisión final siempre es de la árbitra:</strong> en decisiones de hecho, como un offside, puede aceptar lo que dice el VAR; en las de criterio, suele revisar ella misma la pantalla junto a la cancha.</p>
+                <p class="cc-fuente">Fuente: Reglas de Juego IFAB 2026/27, protocolo del VAR.</p>
+              </div>
+            </div>
+
+            <div class="quiz" data-quiz
+                 data-bien="¡Exacto! El VAR recomienda y la árbitra decide. Como tu amiga: lee el chat completo, pero el audio lo mandas tú."
+                 data-mal="Casi. El VAR solo revisa y recomienda: la última palabra siempre es de la árbitra, en la cancha.">
+              <fieldset>
+                <legend><span class="cc-quiz-tag">Mini quiz</span> Durante una revisión del VAR, ¿quién tiene la última palabra?</legend>
+                <div class="opciones">
+                  <button type="button" data-opcion aria-pressed="false">El equipo del VAR, desde la sala de video</button>
+                  <button type="button" data-opcion aria-pressed="false">La DT que protestó la jugada</button>
+                  <button type="button" data-opcion data-correcta aria-pressed="false">La árbitra, en la cancha</button>
+                </div>
+              </fieldset>
+              <p class="resultado" aria-live="polite"></p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Lección 3: Mercado de pases -->
+        <article class="recorte recorte--marco cc-leccion giro-izq" id="mercado-de-pases" aria-labelledby="mercado-titulo">
+          <div class="cc-lado">
+            <p class="cc-numero" aria-hidden="true">03</p>
+            <p class="antetitulo">Lección 03 · Reglamento de transferencias de la FIFA</p>
+            <h2 id="mercado-titulo">Mercado de pases: el Black Friday del fútbol</h2>
+            <p class="cc-remate">Ofertas relámpago, presupuestos al límite y compras de pánico a las 23:59. Tú ya sabes cómo termina esto.</p>
+            <img class="cc-sticker" src="../assets/img/stickers/diamante.webp" alt="" aria-hidden="true" width="320" height="268">
+          </div>
+          <div class="cc-cuerpo">
+            <div class="pestanas">
+              <div role="tablist" aria-label="El mercado de pases en dos versiones">
+                <button type="button" role="tab" id="mercado-tab-analogia" aria-controls="mercado-analogia" aria-selected="true">La analogía</button>
+                <button type="button" role="tab" id="mercado-tab-regla" aria-controls="mercado-regla" aria-selected="false" tabindex="-1">La regla, en serio</button>
+              </div>
+              <div class="cc-panel cc-panel--analogia" role="tabpanel" id="mercado-analogia" aria-labelledby="mercado-tab-analogia" tabindex="0">
+                <p>Como el Black Friday: abre en fechas fijas, el presupuesto no es infinito, varios clubes quieren a la misma estrella y siempre hay alguien que compra a las 23:59 del último día.</p>
+              </div>
+              <div class="cc-panel" role="tabpanel" id="mercado-regla" aria-labelledby="mercado-tab-regla" tabindex="0" hidden>
+                <p>El mercado de pases, o ventana de transferencias, es el periodo en que los clubes pueden inscribir jugadoras y jugadores nuevos. No está en las Reglas de Juego de la IFAB: lo regulan la FIFA y cada federación.</p>
+                <p>Suele haber dos ventanas por temporada: una larga antes de empezar y otra corta a mitad de campaña. Fuera de ellas no se inscribe a nadie, salvo excepciones puntuales. Hay tres movimientos clásicos:</p>
+                <ul class="cc-movimientos">
+                  <li><strong>Traspaso<span class="sr-only">:</span></strong> Un club le paga a otro para que la jugadora deje su contrato y firme uno nuevo.</li>
+                  <li><strong>Préstamo<span class="sr-only">:</span></strong> Se va a otro club por un tiempo, con o sin opción de compra.</li>
+                  <li><strong>Llegada como libre<span class="sr-only">:</span></strong> Su contrato terminó y no se paga traspaso.</li>
+                </ul>
+                <p class="cc-fuente">Fuente: Reglamento sobre el Estatuto y la Transferencia de Jugadores de la FIFA.</p>
+              </div>
+            </div>
+
+            <div class="quiz" data-quiz
+                 data-bien="¡Fichaje de lujo! Contrato terminado y cero traspaso: llegaste como libre."
+                 data-mal="Carrito equivocado. Si tu contrato ya terminó, nadie tiene que pagar traspaso: es una llegada como libre.">
+              <fieldset>
+                <legend><span class="cc-quiz-tag">Mini quiz</span> Tu contrato terminó y firmas con un club nuevo sin que nadie pague traspaso. ¿Cómo se llama ese movimiento?</legend>
+                <div class="opciones">
+                  <button type="button" data-opcion data-correcta aria-pressed="false">Llegada como libre</button>
+                  <button type="button" data-opcion aria-pressed="false">Préstamo con opción de compra</button>
+                  <button type="button" data-opcion aria-pressed="false">Traspaso</button>
+                </div>
+              </fieldset>
+              <p class="resultado" aria-live="polite"></p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Lección 4: Tarjetas -->
+        <article class="recorte recorte--marco cc-leccion giro-der" id="tarjetas" aria-labelledby="tarjetas-titulo">
+          <div class="cc-lado">
+            <p class="cc-numero" aria-hidden="true">04</p>
+            <p class="antetitulo">Lección 04 · Regla 12 de la IFAB</p>
+            <h2 id="tarjetas-titulo">Amarilla y roja: del “último aviso” al “te sacaron del grupo”</h2>
+            <p class="cc-remate">Dos colores, cero ambigüedad y un grupo de WhatsApp como material de estudio.</p>
+            <img class="cc-sticker" src="../assets/img/stickers/corazon-roto.webp" alt="" aria-hidden="true" width="320" height="287">
+          </div>
+          <div class="cc-cuerpo">
+            <div class="pestanas">
+              <div role="tablist" aria-label="Las tarjetas en dos versiones">
+                <button type="button" role="tab" id="tarjetas-tab-analogia" aria-controls="tarjetas-analogia" aria-selected="true">La analogía</button>
+                <button type="button" role="tab" id="tarjetas-tab-regla" aria-controls="tarjetas-regla" aria-selected="false" tabindex="-1">La regla, en serio</button>
+              </div>
+              <div class="cc-panel cc-panel--analogia" role="tabpanel" id="tarjetas-analogia" aria-labelledby="tarjetas-tab-analogia" tabindex="0">
+                <p>La amarilla es el mensaje de la admin del grupo: “una más y te saco”. La roja es cuando de verdad te saca, y el grupo sigue sin ti y sin nadie en tu lugar.</p>
+              </div>
+              <div class="cc-panel" role="tabpanel" id="tarjetas-regla" aria-labelledby="tarjetas-tab-regla" tabindex="0" hidden>
+                <h3>La amarilla</h3>
+                <p>Es una amonestación, una advertencia oficial por conducta antideportiva, protestar, cometer faltas de forma reiterada, demorar la reanudación o no respetar la distancia en un tiro libre o un córner, entre otras. Dos amarillas en el mismo partido equivalen a una roja.</p>
+                <h3>La roja</h3>
+                <p>Es una expulsión: la jugadora debe salir y, si el partido ya empezó, nadie puede reemplazarla, así que su equipo juega con una menos. Se muestra roja directa por:</p>
+                <ul>
+                  <li>juego brusco grave;</li>
+                  <li>conducta violenta;</li>
+                  <li>escupir o morder;</li>
+                  <li>evitar un gol o una ocasión manifiesta de gol con la mano o con una falta (con excepciones dentro del área);</li>
+                  <li>insultos o gestos ofensivos.</li>
+                </ul>
+                <p>Suplentes y cuerpo técnico también pueden recibir tarjetas.</p>
+                <p class="cc-fuente">Fuente: Reglas de Juego IFAB 2026/27, Regla 12 (Faltas y conducta incorrecta).</p>
+              </div>
+            </div>
+
+            <div class="quiz" data-quiz
+                 data-bien="¡Al ángulo! Dos amarillas son una roja: afuera del partido, y nadie ocupa su lugar."
+                 data-mal="Amarilla para esa respuesta. Con la segunda amarilla llega la roja: sale del partido y su equipo juega con una menos.">
+              <fieldset>
+                <legend><span class="cc-quiz-tag">Mini quiz</span> A tu compañera le muestran la segunda amarilla del partido. ¿Qué pasa después?</legend>
+                <div class="opciones">
+                  <button type="button" data-opcion aria-pressed="false">Sigue jugando: la segunda amarilla es solo otra advertencia</button>
+                  <button type="button" data-opcion data-correcta aria-pressed="false">Sale expulsada y su equipo sigue con una jugadora menos</button>
+                  <button type="button" data-opcion aria-pressed="false">Sale, pero la DT puede meter a una suplente en su lugar</button>
+                </div>
+              </fieldset>
+              <p class="resultado" aria-live="polite"></p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="titulo-cierre">
+      <div class="contenedor">
+        <div class="recorte recorte--marco cc-cierre giro-izq">
+          <img src="../assets/img/stickers/labios.webp" alt="" aria-hidden="true" width="320" height="164">
+          <div>
+            <p class="antetitulo">Tarea para la casa</p>
+            <h2 id="titulo-cierre">Ya te sabes las reglas. Ahora, el idioma.</h2>
+            <p>Golazo, caño, valla invicta, tiempo añadido: en el Diccionario Rosa traducimos cada palabra del fútbol a nuestro idioma, sin perder precisión. Para que la próxima vez que el comentarista hable como si todo fuera obvio, tú vayas un paso adelante. Sin caer en offside, claro.</p>
+            <div class="acciones">
+              <a class="boton" href="diccionario-rosa.html">Abrir el Diccionario Rosa</a>
+              <a class="boton boton--secundario" href="pitch-please.html">Ir al chisme de la semana</a>
+            </div>
+            <p class="firma">Un beso al ángulo. — Muak</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div>
+        <a class="logo-pie" href="../index.html" aria-label="Muak, ir a la portada">
+          <img src="../assets/logo/muak-horizontal-oscuro.png" alt="" width="1074" height="294">
+        </a>
+        <p class="firma">Un beso al ángulo. — Muak</p>
+        <p>El fútbol, con labial. Chisme de cancha con fuente para chicas que aman el drama y entienden el juego.</p>
+      </div>
+      <nav aria-label="Secciones">
+        <h2>Secciones</h2>
+        <ul>
+          <li><a href="pitch-please.html">Pitch Please</a></li>
+          <li><a href="clase-de-cancha.html">Clase de Cancha</a></li>
+          <li><a href="diccionario-rosa.html">Diccionario Rosa</a></li>
+          <li><a href="detras-del-beso.html">Detrás del Beso</a></li>
+          <li><a href="contacto.html">Mándanos un Muak</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Síguenos</h2>
+        <p>#BesoAlÁngulo<br>TikTok e Instagram: @muak (muy pronto)</p>
+      </div>
+      <p class="creditos">
+        Prototipo académico © <span data-anio>2026</span> Muak. Todas las jugadoras, jugadores, clubes y ligas que aparecen en el contenido son ficticios.<br>
+        Ilustraciones: nubes de acuarela, stickers punk e historias rosadas de <a href="https://www.freepik.com">Freepik</a>. Beso pinup: <a href="https://www.freepik.com">Designed by rawpixel.com / Freepik</a>. Títulos recortados creados con la fuente Ramove Aniquis (Freepik), usada como imagen. Tipografías: Fraunces y Montserrat (Google Fonts).
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
