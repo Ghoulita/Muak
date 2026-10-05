@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es" data-tema="nubes">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diccionario Rosa — Muak</title>
+  <meta name="description" content="El Diccionario Rosa de Muak: cada palabra del fútbol traducida a nuestro idioma, sin perder precisión. Golazo, caño, penal, offside sentimental y más.">
+  <meta name="theme-color" content="#FFE3EF">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="../assets/logo/muak-favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_LA">
+  <meta property="og:site_name" content="Muak">
+  <meta property="og:title" content="Diccionario Rosa — Muak">
+  <meta property="og:description" content="Cada palabra del fútbol traducida a nuestro idioma, sin perder precisión.">
+  <meta property="og:image" content="https://muak.vercel.app/assets/img/portada.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logo de Muak: un balón de fútbol con un beso de labial rosa, sobre fondo rosa.">
+  <meta name="twitter:card" content="summary_large_image">
+  <script>try{var t=new URLSearchParams(location.search).get("tema")||localStorage.getItem("muak-tema");if(t)document.documentElement.setAttribute("data-tema",t)}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,600..900,0..100,0..1;1,9..144,600..900,0..100,0..1&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <div class="fondo" aria-hidden="true">
+    <div class="nubes-lejos"></div>
+    <div class="nubes-cerca"></div>
+    <div class="cuero"></div>
+    <div class="cuaderno"></div>
+    <div class="gala"></div>
+    <div class="stickers"></div>
+    <div class="destellos"></div>
+  </div>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <a class="logo" href="../index.html" aria-label="Muak, ir a la portada">
+        <img src="../assets/logo/muak-simbolo.svg" alt="" width="46" height="46">
+        <span aria-hidden="true">muak</span>
+      </a>
+
+      <button class="boton-menu" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span aria-hidden="true">☰</span> <span class="texto-boton">Menú</span>
+      </button>
+
+      <nav class="nav" id="menu-principal" aria-label="Principal">
+        <ul>
+          <li><a href="../index.html">Portada</a></li>
+          <li><a href="pitch-please.html">Pitch Please</a></li>
+          <li><a href="clase-de-cancha.html">Clase de Cancha</a></li>
+          <li><a href="diccionario-rosa.html" aria-current="page">Diccionario Rosa</a></li>
+          <li><a href="detras-del-beso.html">Detrás del Beso</a></li>
+          <li><a href="contacto.html">Mándanos un Muak</a></li>
+        </ul>
+      </nav>
+
+      <div class="selector-tema">
+        <button class="boton-tema" type="button" aria-expanded="false" aria-controls="panel-tema">
+          <span aria-hidden="true">✦</span> <span class="texto-boton">Tema</span>
+        </button>
+        <div class="panel-tema" id="panel-tema" role="group" aria-label="Elige el fondo" hidden>
+          <p>Elige tu vibra</p>
+          <button class="opcion-tema" type="button" data-tema-opcion="nubes" aria-pressed="true">
+            <span class="muestra muestra-nubes" aria-hidden="true"></span>
+            <span>Nubes de algodón<small>Un cielo que no se queda quieto</small></span>
+          </button>
+          <button class="opcion-tema" type="button" data-tema-opcion="diario" aria-pressed="false">
+            <span class="muestra muestra-diario" aria-hidden="true"></span>
+            <span>Diario secreto<small>Cuero rosa y stickers pegados</small></span>
+          </button>
+          <button class="opcion-tema" type="button" data-tema-opcion="punk" aria-pressed="false">
+            <span class="muestra muestra-punk" aria-hidden="true"></span>
+            <span>Punk rosa<small>Cuaderno rayado con doodles</small></span>
+          </button>
+          <button class="opcion-tema" type="button" data-tema-opcion="gala" aria-pressed="false">
+            <span class="muestra muestra-gala" aria-hidden="true"></span>
+            <span>Noche de gala<small>Modo oscuro con destellos</small></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <header class="cabecera-pagina dr-cabecera">
+      <div class="contenedor">
+        <img class="dr-st dr-st--diamante" src="../assets/img/stickers/diamante.webp" alt="" aria-hidden="true" width="320" height="268">
+        <img class="dr-st dr-st--labios" src="../assets/img/stickers/labios.webp" alt="" aria-hidden="true" width="320" height="164">
+        <h1><img class="titulo-recortado" src="../assets/img/titulos/diccionario-rosa.webp" alt="Diccionario Rosa" width="1770" height="220"></h1>
+        <p class="bajada">Cada palabra del fútbol traducida a nuestro idioma, sin perder precisión. Búscala, apréndela y úsala en el grupo como si la hubieras inventado tú.</p>
+      </div>
+    </header>
+
+    <div class="contenedor">
+      <div class="buscador dr-buscador recorte recorte--marco giro-izq" role="search" aria-label="Buscar en el Diccionario Rosa">
+        <div class="campo">
+          <label for="buscar-termino">¿Qué palabra buscas, titular?</label>
+          <input type="search" id="buscar-termino" name="q" autocomplete="off" spellcheck="false" placeholder="Ej.: caño, banca, VAR…" aria-describedby="buscar-ayuda" data-buscador="#lista-terminos" data-vacio="sin-resultados">
+          <p class="ayuda" id="buscar-ayuda">Filtra mientras escribes. Sirve un pedacito de palabra y las tildes son opcionales.</p>
+        </div>
+        <nav class="dr-saltos" aria-label="Partes del diccionario">
+          <a href="#palabras-de-cancha">Palabras de cancha <span aria-hidden="true">· 8</span></a>
+          <a href="#como-habla-muak">Cómo habla Muak <span aria-hidden="true">· 10</span></a>
+        </nav>
+      </div>
+
+      <div role="status">
+        <p id="sin-resultados" class="sin-resultados recorte giro-der" hidden>Esa palabra todavía no está en el diccionario. <a href="contacto.html">Mándanos un Muak</a> y la VAR-ificamos para la próxima edición.</p>
+      </div>
+    </div>
+
+    <div id="lista-terminos">
+      <section class="seccion dr-grupo" id="palabras-de-cancha" aria-labelledby="titulo-cancha">
+        <div class="contenedor">
+          <div class="dr-grupo-cabeza">
+            <h2 class="titulo-seccion" id="titulo-cancha">Palabras de cancha</h2>
+            <p class="dr-intro">Las que escuchas en cualquier transmisión, con la definición exacta y traducidas a nuestro idioma.</p>
+          </div>
+
+          <dl class="lista-terminos dr-lista">
+            <div class="termino recorte giro-izq" id="golazo" data-termino>
+              <dt>Golazo</dt>
+              <dd class="dr-tipo">sustantivo<img class="dr-st-termino dr-st-termino--alto" src="../assets/img/stickers/rayo.webp" alt="" aria-hidden="true" width="125" height="320"></dd>
+              <dd>Un gol tan lindo que merece su propio edit, con cámara lenta y música dramática.</dd>
+            </div>
+
+            <div class="termino recorte giro-der" id="cano" data-termino>
+              <dt>Caño <span class="dr-alias">(o túnel)</span></dt>
+              <dd class="dr-tipo">sustantivo</dd>
+              <dd>Pasar el balón entre las piernas de una rival y seguir de largo. Humillación elegante, sin decir una palabra.</dd>
+            </div>
+
+            <div class="termino recorte giro-izq" id="hat-trick" data-termino>
+              <dt>Hat-trick</dt>
+              <dd class="dr-tipo">sustantivo</dd>
+              <dd>Tres goles de la misma persona en un solo partido. Trilogía completa, cero relleno.</dd>
+            </div>
+
+            <div class="termino recorte giro-der" id="penal" data-termino>
+              <dt>Penal</dt>
+              <dd class="dr-tipo">sustantivo</dd>
+              <dd>Si la defensa comete una falta de tiro libre directo dentro de su propia área, se patea desde el punto penal, a 11 metros del arco. Pateadora contra arquera, sin barrera y sin excusas.</dd>
+            </div>
+
+            <div class="termino recorte giro-der" id="clasico" data-termino>
+              <dt>Clásico</dt>
+              <dd class="dr-tipo">sustantivo</dd>
+              <dd>El partido entre rivales de toda la vida. Es como un reencuentro de exalumnas: todas llegan arregladas y con cuentas pendientes.</dd>
+            </div>
+
+            <div class="termino recorte giro-izq" id="valla-invicta" data-termino>
+              <dt>Valla invicta <span class="dr-alias">(o arco en cero)</span></dt>
+              <dd class="dr-tipo">expresión<img class="dr-st-termino" src="../assets/img/stickers/candado.webp" alt="" aria-hidden="true" width="268" height="320"></dd>
+              <dd>Terminar el partido sin recibir goles. Límites sanos, pero en la cancha.</dd>
+            </div>
+
+            <div class="termino recorte giro-der" id="tiempo-anadido" data-termino>
+              <dt>Tiempo añadido</dt>
+              <dd class="dr-tipo">expresión</dd>
+              <dd>Los minutos que la árbitra suma al final de cada tiempo por lo que se perdió en cambios, lesiones, revisiones del VAR y demoras. El “cinco minutitos más”, pero oficial.</dd>
+            </div>
+
+            <div class="termino recorte giro-izq" id="fichaje" data-termino>
+              <dt>Fichaje</dt>
+              <dd class="dr-tipo">sustantivo<img class="dr-st-termino" src="../assets/img/stickers/ojo-pestanas.webp" alt="" aria-hidden="true" width="263" height="162"></dd>
+              <dd>La jugadora o el jugador que llega a un club nuevo. La nueva del grupo: todas la stalkean y nadie lo admite.</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="seccion dr-grupo" id="como-habla-muak" aria-labelledby="titulo-muak">
+        <div class="contenedor">
+          <div class="dr-grupo-cabeza">
+            <h2 class="titulo-seccion" id="titulo-muak">Cómo habla Muak</h2>
+            <p class="dr-intro">Nuestro vocabulario de marca. Úsalo en el chat, en la tribuna y donde quieras: ya es tuyo.</p>
+          </div>
+
+          <dl class="lista-terminos dr-lista">
+            <div class="termino recorte recorte--marco dr-ancho giro-der" id="titulares" data-termino>
+              <dt>Titulares</dt>
+              <dd class="dr-tipo">sustantivo</dd>
+              <dd>La comunidad de Muak, o sea, tú. Así te llamamos porque aquí nadie está en la banca.</dd>
+              <dd class="dr-ejemplo"><span class="dr-ejemplo-etiqueta">Úsala así:</span> <span class="dr-burbuja">Hola, titulares.</span></dd>
+            </div>
+
+            <div class="termino recorte giro-izq" id="chisme-con-fuente" data-termino>
+              <dt>Chisme con fuente</dt>
+              <dd class="dr-tipo">expresión<img class="dr-st-termino" src="../assets/img/stickers/chat-corazon.webp" alt="" aria-hidden="true" width="241" height="229"></dd>
+              <dd>El único chisme que publicamos. Si no hay fuente, no hay chisme.</dd>
+            </div>
+
+            <div class="termino recorte giro-der" id="semaforo" data-termino>
+              <dt>Semáforo</dt>
+              <dd class="dr-tipo">sustantivo</dd>
+              <dd>La etiqueta que lleva cada chisme para que sepas cuánto creerle:</dd>
+              <dd class="etiquetas dr-pastillas"><span class="semaforo semaforo--confirmado">Confirmado</span> <span class="semaforo semaforo--rumor">Rumor</span> <span class="semaforo semaforo--teoria">Teoría</span></dd>
+              <dd><a href="pitch-please.html">Míralo en acción en Pitch Please</a></dd>
+            </div>
+
+            <div class="termino recorte giro-izq" id="al-angulo" data-termino>
+              <dt>Al ángulo</dt>
+              <dd class="dr-tipo">expresión</dd>
+              <dd>Perfecto, impecable.</dd>
+              <dd class="dr-ejemplo"><span class="dr-ejemplo-etiqueta">Úsala así:</span> <span class="dr-burbuja">Ese look de tribuna, al ángulo.</span></dd>
+            </div>
+
+            <div class="termino recorte giro-der" id="mandar-a-la-banca" data-termino>
+              <dt>Mandar a la banca</dt>
+              <dd class="dr-tipo">expresión<img class="dr-st-termino" src="../assets/img/stickers/corazon-roto.webp" alt="" aria-hidden="true" width="320" height="287"></dd>
+              <dd>Dejar de darle atención a alguien o algo.</dd>
+              <dd class="dr-ejemplo"><span class="dr-ejemplo-etiqueta">Úsala así:</span> <span class="dr-burbuja">A ese ex lo mandé a la banca.</span></dd>
+            </div>
+
+            <div class="termino recorte recorte--marco dr-ancho giro-izq" id="offside-sentimental" data-termino>
+              <dt>Offside sentimental</dt>
+              <dd class="dr-tipo">expresión</dd>
+              <dd>Adelantarse antes de tiempo.</dd>
+              <dd class="dr-ejemplo"><span class="dr-ejemplo-etiqueta">Úsala así:</span> <span class="dr-burbuja">Decir “te amo” en la segunda cita es offside sentimental.</span></dd>
+              <dd class="dr-extra">¿Y el offside de la cancha? <a href="clase-de-cancha.html#offside">Te lo explicamos en Clase de Cancha</a>.</dd>
+            </div>
+
+            <div class="termino recorte giro-der" id="amarilla" data-termino>
+              <dt>Amarilla</dt>
+              <dd class="dr-tipo">sustantivo</dd>
+              <dd>Advertencia amistosa.</dd>
+              <dd class="dr-ejemplo"><span class="dr-ejemplo-etiqueta">Úsala así:</span> <span class="dr-burbuja">Esa actitud, amarilla.</span></dd>
+            </div>
+
+            <div class="termino recorte giro-izq" id="var-ificar" data-termino>
+              <dt>VAR-ificar</dt>
+              <dd class="dr-tipo">verbo</dd>
+              <dd>Revisar antes de compartir.</dd>
+              <dd class="dr-ejemplo"><span class="dr-ejemplo-etiqueta">Úsala así:</span> <span class="dr-burbuja">Antes de reenviar ese audio, <span class="dr-sin-corte">VAR-ifícalo.</span></span></dd>
+            </div>
+
+            <div class="termino recorte giro-der" id="tiempo-anadido-muak" data-termino>
+              <dt>Tiempo añadido</dt>
+              <dd class="dr-tipo">expresión<img class="dr-st-termino" src="../assets/img/stickers/corazon-curita.webp" alt="" aria-hidden="true" width="296" height="320"></dd>
+              <dd>Darle una última oportunidad a algo.</dd>
+              <dd class="dr-ejemplo"><span class="dr-ejemplo-etiqueta">Úsala así:</span> <span class="dr-burbuja">Le di tiempo añadido a esa serie y valió la pena.</span></dd>
+            </div>
+
+            <div class="termino recorte giro-izq" id="modo-clasico" data-termino>
+              <dt>Modo clásico</dt>
+              <dd class="dr-tipo">expresión</dd>
+              <dd>Tensión máxima.</dd>
+              <dd class="dr-ejemplo"><span class="dr-ejemplo-etiqueta">Úsala así:</span> <span class="dr-burbuja">El chat del grupo está en modo clásico.</span></dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </div>
+
+    <section class="seccion" aria-labelledby="titulo-falta">
+      <div class="contenedor">
+        <div class="recorte recorte--marco dr-cierre giro-der">
+          <img class="dr-cierre-beso" src="../assets/img/stickers/beso.webp" alt="" aria-hidden="true" width="600" height="383">
+          <div>
+            <p class="antetitulo">Tu palabra, en la próxima edición</p>
+            <h2 id="titulo-falta">¿Te falta una palabra?</h2>
+            <p>Si la escuchaste en la transmisión, en la tribuna o en el chat del grupo y no está aquí, mándanosla. La <span class="dr-sin-corte">VAR-ificamos</span>, la traducimos a nuestro idioma y la sumamos al diccionario.</p>
+            <div class="acciones">
+              <a class="boton" href="contacto.html">Mándanos un Muak</a>
+              <a class="boton boton--secundario" href="clase-de-cancha.html">Aprender las reglas</a>
+            </div>
+            <p class="firma">Un beso al ángulo. — Muak</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div>
+        <a class="logo-pie" href="../index.html" aria-label="Muak, ir a la portada">
+          <img src="../assets/logo/muak-horizontal-oscuro.png" alt="" width="1074" height="294">
+        </a>
+        <p class="firma">Un beso al ángulo. — Muak</p>
+        <p>El fútbol, con labial. Chisme de cancha con fuente para chicas que aman el drama y entienden el juego.</p>
+      </div>
+      <nav aria-label="Secciones">
+        <h2>Secciones</h2>
+        <ul>
+          <li><a href="pitch-please.html">Pitch Please</a></li>
+          <li><a href="clase-de-cancha.html">Clase de Cancha</a></li>
+          <li><a href="diccionario-rosa.html">Diccionario Rosa</a></li>
+          <li><a href="detras-del-beso.html">Detrás del Beso</a></li>
+          <li><a href="contacto.html">Mándanos un Muak</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Síguenos</h2>
+        <p>#BesoAlÁngulo<br>TikTok e Instagram: @muak (muy pronto)</p>
+      </div>
+      <p class="creditos">
+        Prototipo académico © <span data-anio>2026</span> Muak. Todas las jugadoras, jugadores, clubes y ligas que aparecen en el contenido son ficticios.<br>
+        Ilustraciones: nubes de acuarela, stickers punk e historias rosadas de <a href="https://www.freepik.com">Freepik</a>. Beso pinup: <a href="https://www.freepik.com">Designed by rawpixel.com / Freepik</a>. Títulos recortados creados con la fuente Ramove Aniquis (Freepik), usada como imagen. Tipografías: Fraunces y Montserrat (Google Fonts).
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
